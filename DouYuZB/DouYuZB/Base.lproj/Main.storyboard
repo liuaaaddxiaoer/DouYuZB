@@ -8,65 +8,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Main View Controller-->
         <scene sceneID="A1O-ga-ueH">
             <objects>
-                <tabBarController id="wpa-Hr-4W2" sceneMemberID="viewController">
+                <tabBarController id="wpa-Hr-4W2" customClass="MainViewController" customModule="DouYuZB" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="8iC-RX-BUJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
-                    <connections>
-                        <segue destination="STd-FZ-qVj" kind="relationship" relationship="viewControllers" id="CKI-uV-TT9"/>
-                        <segue destination="Vzn-pG-gjA" kind="relationship" relationship="viewControllers" id="m6Y-VZ-kAl"/>
-                        <segue destination="QKG-s6-6YC" kind="relationship" relationship="viewControllers" id="eFa-Ka-b9q"/>
-                        <segue destination="eag-V3-Z5t" kind="relationship" relationship="viewControllers" id="cqc-J8-FUA"/>
-                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yfX-qS-tEM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1207" y="-1722"/>
-        </scene>
-        <!--Profile-->
-        <scene sceneID="P5l-E4-tgp">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Profile" id="eag-V3-Z5t" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="O01-mP-MQb"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yn0-YN-d2B" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="590" y="-1858"/>
-        </scene>
-        <!--Follow-->
-        <scene sceneID="UXf-tU-29p">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Follow" id="QKG-s6-6YC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="foc-NH-XJ5"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MSP-9u-SDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="586" y="-1696"/>
-        </scene>
-        <!--Live-->
-        <scene sceneID="4mH-3l-8ZO">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Live" id="Vzn-pG-gjA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="4zL-aD-cvW"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Odu-oZ-VFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="426" y="-1577"/>
-        </scene>
-        <!--Home-->
-        <scene sceneID="GBS-VO-yKz">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="STd-FZ-qVj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="97Z-F7-oAc"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jDn-CP-ZnR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="586" y="-1470"/>
         </scene>
     </scenes>
 </document>

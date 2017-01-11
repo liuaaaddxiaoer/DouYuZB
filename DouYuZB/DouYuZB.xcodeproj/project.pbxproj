@@ -16,6 +16,7 @@
 		E3F9251C1E25DAE400ED8C80 /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F9251A1E25DAE400ED8C80 /* Follow.storyboard */; };
 		E3F925211E25DB0C00ED8C80 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F9251F1E25DB0C00ED8C80 /* Home.storyboard */; };
 		E3F925241E25DC7900ED8C80 /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F925221E25DC7900ED8C80 /* Live.storyboard */; };
+		E3F925261E25DF3800ED8C80 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F925251E25DF3800ED8C80 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E3F9251B1E25DAE400ED8C80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DouYuZB/Base.lproj/Follow.storyboard; sourceTree = "<group>"; };
 		E3F925201E25DB0C00ED8C80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DouYuZB/Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		E3F925231E25DC7900ED8C80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DouYuZB/Base.lproj/Live.storyboard; sourceTree = "<group>"; };
+		E3F925251E25DF3800ED8C80 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,11 +48,6 @@
 		E3F924DC1E24EB6E00ED8C80 = {
 			isa = PBXGroup;
 			children = (
-				E3F925221E25DC7900ED8C80 /* Live.storyboard */,
-				E3F925171E25DA1300ED8C80 /* Profile.storyboard */,
-				E3F924EC1E24EB6E00ED8C80 /* Main.storyboard */,
-				E3F9251F1E25DB0C00ED8C80 /* Home.storyboard */,
-				E3F9251A1E25DAE400ED8C80 /* Follow.storyboard */,
 				E3F924E71E24EB6E00ED8C80 /* DouYuZB */,
 				E3F924E61E24EB6E00ED8C80 /* Products */,
 			);
@@ -92,6 +89,7 @@
 		E3F925091E25CECC00ED8C80 /* Follow */ = {
 			isa = PBXGroup;
 			children = (
+				E3F9251A1E25DAE400ED8C80 /* Follow.storyboard */,
 			);
 			path = Follow;
 			sourceTree = "<group>";
@@ -99,6 +97,7 @@
 		E3F9250A1E25CECC00ED8C80 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E3F9251F1E25DB0C00ED8C80 /* Home.storyboard */,
 				E3F9250F1E25CF2E00ED8C80 /* HomeTableViewController.swift */,
 			);
 			path = Home;
@@ -107,6 +106,7 @@
 		E3F9250B1E25CECC00ED8C80 /* Live */ = {
 			isa = PBXGroup;
 			children = (
+				E3F925221E25DC7900ED8C80 /* Live.storyboard */,
 			);
 			path = Live;
 			sourceTree = "<group>";
@@ -114,6 +114,8 @@
 		E3F9250C1E25CECC00ED8C80 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E3F924EC1E24EB6E00ED8C80 /* Main.storyboard */,
+				E3F925251E25DF3800ED8C80 /* MainViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -121,6 +123,7 @@
 		E3F9250D1E25CECC00ED8C80 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				E3F925171E25DA1300ED8C80 /* Profile.storyboard */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3F925261E25DF3800ED8C80 /* MainViewController.swift in Sources */,
 				E3F925101E25CF2E00ED8C80 /* HomeTableViewController.swift in Sources */,
 				E3F924E91E24EB6E00ED8C80 /* AppDelegate.swift in Sources */,
 			);
@@ -222,7 +226,7 @@
 				E3F924ED1E24EB6E00ED8C80 /* Base */,
 			);
 			name = Main.storyboard;
-			path = DouYuZB;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		E3F924F11E24EB6E00ED8C80 /* LaunchScreen.storyboard */ = {
@@ -239,6 +243,7 @@
 				E3F925181E25DA1300ED8C80 /* Base */,
 			);
 			name = Profile.storyboard;
+			path = ../../..;
 			sourceTree = "<group>";
 		};
 		E3F9251A1E25DAE400ED8C80 /* Follow.storyboard */ = {
@@ -247,6 +252,7 @@
 				E3F9251B1E25DAE400ED8C80 /* Base */,
 			);
 			name = Follow.storyboard;
+			path = ../../..;
 			sourceTree = "<group>";
 		};
 		E3F9251F1E25DB0C00ED8C80 /* Home.storyboard */ = {
@@ -255,6 +261,7 @@
 				E3F925201E25DB0C00ED8C80 /* Base */,
 			);
 			name = Home.storyboard;
+			path = ../../..;
 			sourceTree = "<group>";
 		};
 		E3F925221E25DC7900ED8C80 /* Live.storyboard */ = {
@@ -263,6 +270,7 @@
 				E3F925231E25DC7900ED8C80 /* Base */,
 			);
 			name = Live.storyboard;
+			path = ../../..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
