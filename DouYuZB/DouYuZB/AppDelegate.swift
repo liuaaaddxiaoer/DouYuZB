@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         setupGlobalInfo()
        
-
         return true
     }
 
@@ -50,6 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 
+// MARK:- 设置全局的外貌 appearance
 extension AppDelegate {
     
     func setupGlobalInfo() -> Void {
@@ -57,16 +57,4 @@ extension AppDelegate {
     }
 }
 
-/// 全局的DEBUG模式下的打印
-///
-/// - Parameters:
-///   - message: 需要打印的消息
-///   - file: 打印所在的文件
-///   - line: 打印所在的函数的行数 可以使用 command + shift o 快速跳转到文件再使用 command+L跳转到对应的行数
-public func DYPrint<T>(_ message: T, file:String = #file, line:Int = #line) {
-    #if DEBUG
-        let fileName = (file as NSString).lastPathComponent
-        print("函数所在文件:\(fileName)---函数所在行数:\(line)---对应打印数据:\(message)")
-    #endif
-}
 

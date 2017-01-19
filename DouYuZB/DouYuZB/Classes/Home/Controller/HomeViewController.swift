@@ -12,14 +12,34 @@ import UIKit
 private let KTitleViewH:CGFloat = 44
 
 class HomeViewController: UIViewController {
-    // MARK:- 属性
-   fileprivate lazy var pageTitleView :PageTitleView = {
+    // MARK:- 懒加载属性
+    /// pageTitleView
+   fileprivate lazy var pageTitleView: PageTitleView = {
         
         let frame = CGRect(x: 0, y: DYNavBarHeight, width: SCREEN_WIDTH, height: KTitleViewH)
         let titles = ["推荐","游戏","娱乐","趣玩"];
         let titleView = PageTitleView(frame: frame, titles: titles)
+        titleView.delegate = self
         return titleView
     
+    }()
+    
+    fileprivate lazy var pageContentView: PageContentView = { [unowned self] in
+        // 1. 设置contentvew的frame
+        let contentY = self.pageTitleView.frame.maxY
+        let contentFrame = CGRect(x: 0, y: contentY, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - contentY)
+        // 2. 设置childVcs
+        var childVcs = [UIViewController]()
+        for _ in 0..<4 {
+            let vc = UIViewController()
+            vc.view.backgroundColor = UIColor(CGFloat(arc4random_uniform(255)), CGFloat( arc4random_uniform(255)), CGFloat( arc4random_uniform(255)))
+            childVcs.append(vc)
+        }
+        
+        let contentView = PageContentView(frame: contentFrame, childVcs: childVcs, parentVC: self)
+        contentView.delegate = self
+        return contentView
+        
     }()
     
     // MARK:- 重写的系统的方法
@@ -38,10 +58,15 @@ class HomeViewController: UIViewController {
 // MARK:- 设置UI界面
 extension HomeViewController {
     fileprivate func setupUI() {
+        // 0取消scrollview的偏移64
+        automaticallyAdjustsScrollViewInsets = false
         // 1.设置导航栏
         setupNavigationBar()
         // 2.添加titleView
         view.addSubview(pageTitleView)
+        // 3.添加contentView
+        view.addSubview(pageContentView)
+        
     }
     
     /// 设置导航栏
@@ -63,7 +88,24 @@ extension HomeViewController {
         let scanItem = UIBarButtonItem("Image_scan", highImageName: "Image_scan_click", size: size)
         navigationItem.rightBarButtonItems = [hisItem,searchItem,scanItem]
         
-        
+
+    }
+}
+
+
+// MARK:- PageTitleViewDelegate
+extension HomeViewController: PageTitleViewDelegate {
+
+    func pageTitleView(titleView: PageTitleView, index: Int) {
+        pageContentView.setContentOffset(index: index)
+    }
+}
+// MARK:- PageContentViewDelegate
+extension HomeViewController: PageContentViewDelegate {
+    
+    func pageContentView(contentView: PageContentView, progress: CGFloat, targetIndex: Int, sourceIndex: Int) {
+        //更改pageTitleView的状态
+        pageTitleView.setupTitleColorChange(progress: progress, targetIndex: targetIndex, sourceIndex: sourceIndex)
         
         
         

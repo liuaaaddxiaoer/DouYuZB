@@ -13,6 +13,8 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tabBar.isTranslucent = false
+        
         addChildViewController("Home")
         addChildViewController("Live")
         addChildViewController("Follow")

@@ -9,10 +9,12 @@
 import UIKit
 
 /// 导航栏的高度64
-let DYNavBarHeight:CGFloat = 64
+public let DYNavBarHeight: CGFloat = 64
 /// 状态栏的高度20
-let DYStatusBarHeight:CGFloat = 20
+public let DYStatusBarHeight: CGFloat = 20
+/// tabbar的高度
+public let DYTabBarHeight: CGFloat = 49
 /// 屏幕的宽度
-let SCREEN_WIDTH = UIScreen.main.bounds.size.width
+public let SCREEN_WIDTH = UIScreen.main.bounds.size.width
 /// 屏幕的高度
-let SCREEN_HEIGHT = UIScreen.main.bounds.size.height
+public let SCREEN_HEIGHT = UIScreen.main.bounds.size.height
